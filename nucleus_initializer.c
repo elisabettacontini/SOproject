@@ -1,5 +1,6 @@
-
-//include
+#include "pandos_const.h"
+#include "pandos_types.h"
+#include "scheduler.h"
 
 
 int processCount;    //n° di processi iniziati non ancora terminati
