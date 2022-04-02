@@ -42,7 +42,7 @@ int main(){
 	pass_up_vector = (passupvector_t*) PASSUPVECTOR;
 	pass_up_vector -> tlb_refill_handler = (memaddr) uTLB_RefillHandler;
 	pass_up_vector -> tlb_refill_stackPtr = (memaddr) KERNELSTACK;
-	pass_up_vector -> exception_handler = (memaddr) exceptionHandler;    //TODO: implementare funz exceptionHandler nel file per gestine eccezioni
+	pass_up_vector -> exception_handler = (memaddr) exceptionHandler;    //TODO: implementare funz exceptionHandler nel file per gestione eccezioni
 	pass_up_vector -> exception_stackPtr = (memaddr) KERNELSTACK;
 	
 	//caricamente Interval Timer a 100 ms
@@ -74,7 +74,6 @@ int main(){
 		//si inserisce il primo pcb nella coda ready a bassa priorità
 		insertProcQ(&lowPrioQueue, firstPcb);
 		processCount++;
-		
 		
 		scheduler();
 		
